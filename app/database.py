@@ -18,7 +18,6 @@ def create_table():
 
 
 def insert_article(article):
-    # avoid duplicates
     cursor.execute("SELECT 1 FROM articles WHERE title = ?", (article["title"],))
     if cursor.fetchone():
         return
@@ -38,5 +37,5 @@ def insert_article(article):
 
 
 def fetch_articles():
-    cursor.execute("SELECT * FROM articles ORDER BY id DESC LIMIT 50")
+    cursor.execute("SELECT * FROM articles ORDER BY id DESC LIMIT 100")
     return cursor.fetchall()

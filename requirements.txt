@@ -1,6 +1,5 @@
-fastapi
-uvicorn
+streamlit
+groq
 requests
 beautifulsoup4
 python-dotenv
-groq
